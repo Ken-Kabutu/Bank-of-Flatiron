@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 function Search({ onSearch }) {
-  const [searchWord, setSearchWord] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setSearchWord(value);
+    setSearchTerm(value);
     onSearch(value);
   };
 
@@ -16,7 +16,7 @@ function Search({ onSearch }) {
       <input
         type="text"
         placeholder="Search your Recent Transactions"
-        value={searchWord}
+        value={searchTerm}
         onChange={handleChange}
       />
       <i className="circular search link icon"></i>

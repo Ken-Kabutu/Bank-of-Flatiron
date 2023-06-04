@@ -4,6 +4,7 @@ import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer() {
+  const initialTransactions = [];
 
   const [searchWord, setSearchWord] = useState("");
   const [transactions, setTransactions] = useState([]);
@@ -20,7 +21,7 @@ function AccountContainer() {
     <div>
       <Search onSearch={handleSearch} />
       <AddTransactionForm onTransactionSubmit={handleTransactionAdded} />
-      <TransactionsList searchWord={searchWord} transactions={transactions} />
+      <TransactionsList  initialTransactions={initialTransactions} />
     </div>
   );
 }
