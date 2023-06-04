@@ -46,7 +46,7 @@ function AddTransactionForm() {
 
   return (
     <div className="ui segment">
-      <form className="ui form">
+      <form className="ui form" onSubmit={handleSubmit}>
         <div className="inline fields">
           <input
            type="date"

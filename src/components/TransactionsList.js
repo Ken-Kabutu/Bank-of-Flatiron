@@ -26,9 +26,9 @@ function TransactionsList() {
     transaction.description.toLowerCase().includes(searchWord.toLowerCase())
   );
 
-  const handleTransactionSubmit = (newTransaction) => {
+  const handleTransactionSubmit = (filteredTransactions) => {
     //adding new transaction to exisiting transaction
-    setTransactions([...transactions, newTransactions]);
+    setTransactions([...transactions, filteredTransactions]);
   }
 
 
