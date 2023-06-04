@@ -19,7 +19,7 @@ function AccountContainer() {
   return (
     <div>
       <Search onSearch={handleSearch} />
-      <AddTransactionForm onTransactionsAdded={handleTransactionAdded} />
+      <AddTransactionForm onTransactionSubmit={handleTransactionAdded} />
       <TransactionsList searchWord={searchWord} transactions={transactions} />
     </div>
   );

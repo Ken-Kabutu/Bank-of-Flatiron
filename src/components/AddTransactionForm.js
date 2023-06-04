@@ -30,7 +30,7 @@ function AddTransactionForm() {
     .then(res => res.json())
     .then(data => {
       //to add new transaction to list
-      onTransactionAdded(data);
+      onTransactionSubmit(data);
       //resetting state after form submission
       setFormData({
         date: "",
