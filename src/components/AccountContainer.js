@@ -19,8 +19,8 @@ function AccountContainer() {
 
   return (
     <div>
-      <Search onSearch={handleSearch} />
-      <AddTransactionForm onTransactionSubmit={handleTransactionAdded} />
+      {/* <Search onSearch={handleSearch} />
+      <AddTransactionForm onTransactionSubmit={handleTransactionAdded} /> */}
       <TransactionsList  initialTransactions={initialTransactions} />
     </div>
   );
