@@ -29,7 +29,13 @@ function TransactionsList({ initialTransactions }) {
   const handleTransactionSubmit = (newTransaction) => {
     //adding new transaction to exisiting transaction
     setTransactions([...transactions, newTransaction]);
-  }
+  };
+
+  const handleDelete = id => {
+    setTransactions(prevTransactions =>
+      prevTransactions.filter(transaction => transaction.id !== id)
+    );
+  };
 
 
   return (
@@ -60,6 +66,7 @@ function TransactionsList({ initialTransactions }) {
             description={transaction.description}
             category={transaction.category}
             amount={transaction.amount}
+            onDelete={handleDelete}
           />
         ))}
       </tbody>
